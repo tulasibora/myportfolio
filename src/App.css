@@ -1,38 +1,192 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
+.navbar {
+  background-color: rgb(15, 15, 15) !important;
+}
+.desctopItems {
+  color: white !important;
+}
+.desctopItems.active {
+  color: rgb(26, 66, 241) !important;
+}
+.desctopItems:hover {
+  text-shadow: 0 0 0.5rem #fff;
+}
+.navbar-brand {
+  color: white !important;
+}
+/* /////////keyframes for animation////////// */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+/* //////////////////////// */
+.desctopmenu {
+  opacity: 0;
+  animation: slideTop 0.5s ease forwards;
+}
+
+.homeDiv {
+  position: absolute;
+  display: flex;
+  align-items: end;
+  justify-content: start;
+  height: 90vh;
+  width: 100%;
+  background-image: url("./assets/Images/tulasipics3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+.innerdiv {
+  padding: 1rem;
+  background-color: rgba(8, 8, 8, 0.6);
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  font-family: monospace;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: end;
+  align-items: start;
+}
+.typing-container {
+  height: 30%;
+  width: 55%;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.typing-line {
+  display: block;
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.1em solid transparent;
+  animation: typing 4s steps(40, end) forwards;
+  font-size: 2.5rem;
+}
+.typing-line:last-child {
+  animation: typing 4s steps(40, end) forwards,
+    blink-caret 0.75s step-end infinite;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* ////////////////////////////// */
+
+.socialmedia {
+  animation: slideTop 12s ease forwards;
+  display: flex;
+  margin-top: 1rem;
+}
+.socialmedia a {
+  font-size: 2.5rem;
+  margin-left: 1rem;
+}
+.downloadbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 1rem;
+  background-color: rgb(28, 61, 206);
+  color: white;
+  border: none;
+  font-size: 1rem !important;
+  height: 3rem;
+  padding: 0rem 0.5rem;
+}
+/* Small screens */
+@media (max-width: 600px) {
+  .typing-line {
+    font-size: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+  .typing-container {
+    width: 85%;
+  }
+  .socialmedia a {
+    font-size: 2rem;
+  }
+  .downloadbtn {
+    font-size: 0.8rem !important;
+    height: 2.2rem;
+    padding: 0rem 0.5rem;
+  }
+}
+
+/* Medium screens */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .typing-line {
+    font-size: 1.5rem;
+  }
+  .typing-container {
+    width: 70%;
+  }
+  .socialmedia a {
+    font-size: 1.8rem;
+  }
+  .downloadbtn {
+    font-size: 0.8rem !important;
+    height: 2.2rem;
+    padding: 0rem 0.5rem;
+  }
+}
+/* Large screens */
+@media (min-width: 1025px) {
+  .typing-line {
+    font-size: 2.5rem;
+  }
+  .socialmedia a {
+    font-size: 2rem;
+  }
+  .downloadbtn {
+    font-size: 0.8rem !important;
+    height: 2.5rem;
+    padding: 0rem 0.5rem;
   }
 }

@@ -8,7 +8,7 @@ const Home = () => {
     <div className="homeDiv">
       <div className="innerdiv">
         <div className="typing-container ">
-          <h1 className="typing-line" style={{ animationDelay: "0s" }}>
+          <h1 className="typing-line " style={{ animationDelay: "0s" }}>
             Hi, It's me
           </h1>
           <h1 className="typing-line" style={{ animationDelay: "4s" }}>
@@ -20,8 +20,8 @@ const Home = () => {
         </div>
         <div className="socialmedia">
           <a className="downloadbtn" href={resume} download>
-            <Button type="primary" icon={<DownloadOutlined />} size={"large"}>
-              Download Resume
+            <Button type="primary" icon={<DownloadOutlined />}>
+              Download CV
             </Button>
           </a>
           <a href="https://www.facebook.com/tulasi.bora.7">
@@ -29,9 +29,6 @@ const Home = () => {
           </a>
           <a href="https://www.instagram.com/">
             <i className="bx bxl-instagram"></i>
-          </a>
-          <a href="https://twitter.com/Twitter">
-            <i className="bx bxl-twitter"></i>
           </a>
           <a href="https://www.linkedin.com/feed/">
             <i className="bx bxl-linkedin-square"></i>

@@ -2,12 +2,13 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { NavLink } from "react-router-dom";
 import "../App.css";
-
+import logo from "../assets/Images/logo1.jpg";
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg ">
       <div className="container-fluid">
-        <div className="navbar-brand">TULASI</div>
+        <img src={logo} alt="logo" />
+        <div className="navbar-brand">__Tulasi's Portfolio__</div>
         <button
           className="navbar-toggler"
           type="button"

@@ -1,42 +1,46 @@
 import React from "react";
 import "../../App.css";
 import resume from "../../assets/Images/ResumeTulasi.pdf";
+import { DownloadOutlined } from "@ant-design/icons";
+import { Button } from "antd";
 const Home = () => {
   return (
     <div className="homeDiv">
       <div className="innerdiv">
-        <div class="typing-container ">
-          <h1 class="typing-line" style={{ animationDelay: "0s" }}>
+        <div className="typing-container ">
+          <h1 className="typing-line" style={{ animationDelay: "0s" }}>
             Hi, It's me
           </h1>
-          <h1 class="typing-line" style={{ animationDelay: "4s" }}>
+          <h1 className="typing-line" style={{ animationDelay: "4s" }}>
             MS.TULASI
           </h1>
-          <h1 class="typing-line" style={{ animationDelay: "6s" }}>
+          <h1 className="typing-line" style={{ animationDelay: "6s" }}>
             A Fullstack Developer ...
           </h1>
         </div>
         <div className="socialmedia">
-          <a className="downloadbtn" href={resume}>
-            Download CV
+          <a className="downloadbtn" href={resume} download>
+            <Button type="primary" icon={<DownloadOutlined />} size={"large"}>
+              Download Resume
+            </Button>
           </a>
           <a href="https://www.facebook.com/tulasi.bora.7">
-            <i class="bx bxl-facebook"></i>
+            <i className="bx bxl-facebook"></i>
           </a>
           <a href="https://www.instagram.com/">
-            <i class="bx bxl-instagram"></i>
+            <i className="bx bxl-instagram"></i>
           </a>
           <a href="https://twitter.com/Twitter">
-            <i class="bx bxl-twitter"></i>
+            <i className="bx bxl-twitter"></i>
           </a>
           <a href="https://www.linkedin.com/feed/">
-            <i class="bx bxl-linkedin-square"></i>
+            <i className="bx bxl-linkedin-square"></i>
           </a>
           <a href="https://www.linkedin.com/feed/">
-            <i class="bx bxs-envelope"></i>
+            <i className="bx bxs-envelope"></i>
           </a>
           <a href="https://www.linkedin.com/feed/">
-            <i class="bx bxl-github"></i>
+            <i className="bx bxl-github"></i>
           </a>
         </div>
       </div>

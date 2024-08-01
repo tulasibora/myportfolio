@@ -9,6 +9,19 @@ body {
   overflow: hidden;
   position: relative;
 }
+.LoderComponent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  max-width: 100%;
+  background-color: #262626;
+  color: white;
+}
+.LoderComponent h1 {
+  font-size: 1.5rem;
+}
 .navbar {
   background-color: rgb(15, 15, 15) !important;
 }
@@ -74,8 +87,8 @@ body {
 .homeDiv {
   position: absolute;
   display: flex;
-  align-items: end;
-  justify-content: start;
+  align-items: center;
+  justify-content: center;
   height: 90vh;
   width: 100%;
   background-image: url("./assets/Images/tulasipics3.jpg");
@@ -94,7 +107,7 @@ body {
   font-family: monospace;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: center;
   align-items: start;
 }
 .typing-container {
@@ -134,7 +147,6 @@ body {
   align-items: center;
   text-decoration: none;
   border-radius: 1rem;
-  background-color: rgb(28, 61, 206);
   color: white;
   border: none;
   font-size: 1rem !important;
@@ -151,11 +163,19 @@ body {
   }
   .socialmedia a {
     font-size: 2rem;
+    margin-left: 0.2rem;
+    margin-bottom: 2.5rem;
+  }
+  .socialmedia {
+    margin-top: 0rem;
   }
   .downloadbtn {
     font-size: 0.8rem !important;
     height: 2.2rem;
     padding: 0rem 0.5rem;
+  }
+  .LoderComponent h1 {
+    font-size: 0.8rem;
   }
 }
 
@@ -174,6 +194,9 @@ body {
     font-size: 0.8rem !important;
     height: 2.2rem;
     padding: 0rem 0.5rem;
+  }
+  .LoderComponent h1 {
+    font-size: 1rem;
   }
 }
 /* Large screens */

@@ -6,17 +6,34 @@ import About from "./Components/Profile/About";
 import Skills from "./Components/Profile/Skills";
 import Projects from "./Components/Profile/Projects";
 import "boxicons/css/boxicons.min.css";
+import LoderComponent from "./Components/StylingComponents/Loder";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { updateIsloadValue } from "./Redux/action";
 
 function App() {
+  const dispatch = useDispatch();
+  const isLoad = useSelector((state) => state.isLoad);
+  useEffect(() => {
+    setTimeout(() => {
+      dispatch(updateIsloadValue());
+    }, 5000);
+  }, []);
   return (
-    <div className="App">
-      <Navbar />
-      <Routes>
-        <Route element={<Home />} path="/" />
-        <Route element={<About />} path="/about" />
-        <Route element={<Projects />} path="/projects" />
-        <Route element={<Skills />} path="/skills" />
-      </Routes>
+    <div>
+      {isLoad ? (
+        <LoderComponent />
+      ) : (
+        <div className="AppMainDiv">
+          <Navbar />
+          <Routes>
+            <Route element={<Home />} path="/" />
+            <Route element={<About />} path="/about" />
+            <Route element={<Projects />} path="/projects" />
+            <Route element={<Skills />} path="/skills" />
+          </Routes>
+        </div>
+      )}
     </div>
   );
 }

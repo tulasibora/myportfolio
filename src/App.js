@@ -4,12 +4,12 @@ import Navbar from "./Components/Navbar";
 import Home from "./Components/Profile/Home";
 import About from "./Components/Profile/About";
 import Skills from "./Components/Profile/Skills";
-import Projects from "./Components/Profile/Projects";
 import "boxicons/css/boxicons.min.css";
 import LoderComponent from "./Components/StylingComponents/Loder";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { updateIsloadValue } from "./Redux/action";
+import Contact from "./Components/Profile/Contact";
 
 function App() {
   const dispatch = useDispatch();
@@ -29,7 +29,7 @@ function App() {
           <Routes>
             <Route element={<Home />} path="/" />
             <Route element={<About />} path="/about" />
-            <Route element={<Projects />} path="/projects" />
+            <Route element={<Contact />} path="/contact" />
             <Route element={<Skills />} path="/skills" />
           </Routes>
         </div>

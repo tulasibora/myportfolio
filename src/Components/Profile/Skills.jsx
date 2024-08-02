@@ -4,10 +4,8 @@ import { useSelector } from "react-redux";
 
 const Skills = () => {
   const skills = useSelector((state) => state.skills);
-  console.log(skills);
   const [techName, setTechname] = useState("FrontEnd");
   const [data, setData] = useState(skills.FrontEnd);
-  console.log(techName);
   const handleSetBackgroundNContent = (data) => {
     setTechname(data.name);
     if (data.name === "FrontEnd") {

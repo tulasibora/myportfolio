@@ -20,7 +20,7 @@ const initialState = {
   isLoad: true,
   homepageData: {},
   skills: {
-    FrontEnd: [html, react, redux, javascrpt, css, mui, bootstrap, antD],
+    FrontEnd: [javascrpt, react, redux, html, css, mui, bootstrap, antD],
     Backend: [express, nodejs],
     DataBase: [mongodb, mysql],
     VersionControle: [git, github],

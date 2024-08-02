@@ -1,6 +1,6 @@
 import React from "react";
 import "../../App.css";
-import resume from "../../assets/Images/ResumeTulasi.pdf";
+import resume from "../../assets/Images/Resume.pdf";
 import { DownloadOutlined } from "@ant-design/icons";
 import { Button } from "antd";
 const Home = () => {

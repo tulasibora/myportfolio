@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { NavLink } from "react-router-dom";
 import "../App.css";
 import logo from "../assets/Images/logo1.jpg";
+import MenuIcon from "@mui/icons-material/Menu";
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg ">
@@ -18,7 +19,9 @@ const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className=" togglerIcon">
+            <MenuIcon />
+          </span>
         </button>
         <div className="collapse navbar-collapse desctopmenu" id="navbarNav">
           <ul className="navbar-nav ms-auto">
